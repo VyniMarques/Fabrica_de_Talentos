@@ -9,8 +9,7 @@ class Ponto:
 
     def marcarPonto(self, mapa):
         lat_lon = (self.lat, self.lon)
-        tooltip_text = "Clique aqui"
-        folium.Marker(location=lat_lon, popup=self.nome, tooltip=tooltip_text).add_to(mapa)
+        folium.Marker(location=lat_lon, tooltip=self.nome).add_to(mapa)
 
     def mostraInfo(self):
         print("Nome: {}\n"
